@@ -25,11 +25,11 @@ int main()
     impy = MaxY / 8;
     attron(COLOR_PAIR(1));
     printw("YaST @ G185");
-    for (int i = 11; i < MaxX / 1.22; i++)
+    for (int i = 11; i < MaxX / 1.16; i++)
     {
         printw(" ");
     }
-    move(0, MaxX / 1.22);
+    move(0, MaxX / 1.16);
     printw("Press F1 for Help");
     attroff(COLOR_PAIR(1));
     refresh();
@@ -63,9 +63,21 @@ int main()
     touchwin(ventana3);
     wrefresh(ventana3);
     move(MaxY / 1.10, 0 + 2);
-    printw("[Help]");
+    printw("[");
+    attron(COLOR_PAIR(3));
+    move(MaxY / 1.10, 0 + 3);
+    printw("H");
+    attroff(COLOR_PAIR(3));
+    move(MaxY / 1.10, 0 + 4);
+    printw("elp]");
     move(MaxY / 1.10, MaxX / 1.09);
-    printw("[Quit]");
+    printw("[");
+     attron(COLOR_PAIR(3));
+    move(MaxY / 1.10, MaxX / 1.08);
+    printw("Q");
+    attroff(COLOR_PAIR(3));
+    move(MaxY / 1.10, MaxX / 1.07);
+    printw("uit]");
     getch();
     endwin();
     return 0;
