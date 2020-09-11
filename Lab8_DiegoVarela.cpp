@@ -25,11 +25,10 @@ int main()
     impy = MaxY / 8;
     attron(COLOR_PAIR(1));
     printw("YaST @ G185");
-    for (int i = 11; i < MaxX / 1.16; i++)
+    for (int i = 11; i < MaxX - 17; i++)
     {
         printw(" ");
     }
-    move(0, MaxX / 1.16);
     printw("Press F1 for Help");
     attroff(COLOR_PAIR(1));
     refresh();
@@ -72,7 +71,7 @@ int main()
     printw("elp]");
     move(MaxY / 1.10, MaxX / 1.09);
     printw("[");
-     attron(COLOR_PAIR(3));
+    attron(COLOR_PAIR(3));
     move(MaxY / 1.10, MaxX / 1.08);
     printw("Q");
     attroff(COLOR_PAIR(3));
